@@ -10,7 +10,14 @@ Item {
   Image {
     id: background
     anchors.fill: parent
-    source: config.background
+    source: "assets/background.png"
+  }
+
+  Image {
+    id: logo
+    anchors.horizontalCenter: page.horizontalCenter
+    y: parent.height - 200
+    source: "assets/logo.png"
   }
 
   Login {
@@ -45,7 +52,7 @@ Item {
         width: parent.width
         height: parent.height
         text: name
-        color: "white"
+        color: "black"
         opacity: (delegateArea.containsMouse || sessionSelect.currentIndex == index) ? 1 : 0.3
         font {
           pointSize: (config.enableHDPI == "true") ? 6 : 12
@@ -146,26 +153,28 @@ Item {
     to: "login"
     reversible: false
 
-    SequentialAnimation {
-      PropertyAnimation {
-        target: listView
-        properties: "opacity"
-        duration: 500
-      }
-      PropertyAnimation {
-        target: listView
-        properties: "visible"
-        duration: 0
-      }
+    SequentialAnimation{
       PropertyAnimation {
         target: loginFrame
         properties: "visible"
         duration: 0
       }
+      ParallelAnimation {
+        PropertyAnimation {
+          target: listView
+          properties: "opacity"
+          duration: 500
+        }
+        PropertyAnimation {
+          target: loginFrame
+          properties: "opacity"
+          duration: 500
+        }
+      }
       PropertyAnimation {
-        target: loginFrame
-        properties: "opacity"
-        duration: 500
+        target: listView
+        properties: "visible"
+        duration: 0
       }
     }
   },
@@ -174,26 +183,28 @@ Item {
     to: ""
     reversible: false
 
-    SequentialAnimation {
-      PropertyAnimation {
-        target: loginFrame
-        properties: "opacity"
-        duration: 500
-      }
-      PropertyAnimation {
-        target: loginFrame
-        properties: "visible"
-        duration: 0
-      }
+    SequentialAnimation{
       PropertyAnimation {
         target: listView
         properties: "visible"
         duration: 0
       }
+      ParallelAnimation {
+        PropertyAnimation {
+          target: loginFrame
+          properties: "opacity"
+          duration: 500
+        }
+        PropertyAnimation {
+          target: listView
+          properties: "opacity"
+          duration: 500
+        }
+      }
       PropertyAnimation {
-        target: listView
-        properties: "opacity"
-        duration: 500
+        target: loginFrame
+        properties: "visible"
+        duration: 0
       }
     }
   }]

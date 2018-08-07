@@ -17,7 +17,7 @@ Row {
     id: shutdownButton
     width: 64
     height: 64
-    source: "Assets/shutdown_normal.png"
+    source: "assets/shutdown_normal.png"
 
     MouseArea {
       id: shutdownArea
@@ -31,7 +31,7 @@ Row {
     Image {
       id: shutdownHover
       anchors.fill: parent
-      source: "Assets/shutdown_hover.png"
+      source: "assets/shutdown_hover.png"
       opacity: shutdownArea.containsMouse ? 1 : 0
 
       Behavior on opacity {
@@ -44,7 +44,7 @@ Row {
     id: restartButton
     width: 64
     height: 64
-    source: "Assets/restart_normal.png"
+    source: "assets/restart_normal.png"
 
     MouseArea {
       id: restartArea
@@ -58,7 +58,7 @@ Row {
     Image {
       id: restartHover
       anchors.fill: parent
-      source: "Assets/restart_hover.png"
+      source: "assets/restart_hover.png"
       opacity: restartArea.containsMouse ? 1 : 0
 
       Behavior on opacity {
@@ -71,7 +71,7 @@ Row {
     id: sessionButton
     width: 64
     height: 64
-    source: "Assets/session_normal.png"
+    source: "assets/session_normal.png"
 
     MouseArea {
       id: sessionArea
@@ -90,7 +90,7 @@ Row {
     Image {
       id: sessionHover
       anchors.fill: parent
-      source: "Assets/session_hover.png"
+      source: "assets/session_hover.png"
       opacity: sessionArea.containsMouse ? 1 : 0
 
       Behavior on opacity {

@@ -90,45 +90,21 @@ Item {
     }
   }
 
-  //Back Button
-  Image {
-
-    anchors {
-      right: userProfile.left
-      rightMargin: 30
-    }
-    y: parent.height / 2
-    width: 32
-    height: 32
-    source: "Assets/Selector.png"
-    transform: Rotation { origin.x : 16; origin.y: 16; angle: 270}
-
-    MouseArea {
-      anchors.fill: parent
-      onClicked: {
-        loginFrame.back();
-      }
-    }
-  }
-
-
   Item {
     id: userProfile
 
-    width: 200
-    height: 350
+    width: 250
+    height: 150
 
-    y:0
     anchors {
       horizontalCenter: parent.horizontalCenter
       verticalCenter: parent.verticalCenter
     }
 
-    //User's Name
     Text {
       id: usersName
 
-      color: "white"
+      color: "black"
       font {
         family: "FiraMono"
         pointSize: 20
@@ -136,28 +112,13 @@ Item {
       text: loginFrame.realName
       anchors.horizontalCenter: parent.horizontalCenter
     }
-
-    //User's Profile Pic
-    Image {
-      id: usersPic
-
-      width: 128
-      height: 128
-      anchors {
-        top: usersName.bottom
-        topMargin: 50
-        horizontalCenter: parent.horizontalCenter
-      }
-      source: loginFrame.icon
-    }
-
   }
 
   Text {
     id: passwordStatus
 
     text: "Incorrect Password!"
-    color: "white"
+    color: "black"
     font {
       pointSize: 10
       family: "FiraMono"
@@ -165,8 +126,8 @@ Item {
 
     anchors {
       horizontalCenter: parent.horizontalCenter
-      bottom: passwordBox.top
-      bottomMargin: 20
+      top: passwordBox.bottom
+      topMargin: 10
     }
 
     opacity: 0
@@ -198,7 +159,7 @@ Item {
     anchors {
       horizontalCenter: parent.horizontalCenter
       top: userProfile.bottom
-      topMargin: -75
+      topMargin: -100
     }
 
     Text {
@@ -210,7 +171,7 @@ Item {
         leftMargin: 15
       }
       text: "Password..."
-      color: "white"
+      color: "black"
       font {
         pointSize: 14
         family: "FiraMono"
@@ -232,7 +193,7 @@ Item {
         family: "FiraMono"
         letterSpacing: 2
       }
-      color: "white"
+      color: "black"
       echoMode:TextInput.Password
       clip: true
 
@@ -250,7 +211,7 @@ Item {
       width: 30
       height: 30
       opacity: 0
-      source: "Assets/RightArrow.png"
+      source: "assets/rightarrow.png"
 
       MouseArea {
         anchors.fill: parent
@@ -271,7 +232,7 @@ Item {
       bottom: passwordBox.bottom
       left: passwordBox.left
     }
-    color: "white"
+    color: "black"
     opacity: 0.3
     radius: 4
   }

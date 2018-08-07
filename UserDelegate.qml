@@ -3,7 +3,7 @@ import QtQuick 2.0
 Item {
 
   width: 250
-  height: 250
+  height: 50
 
   property string name: model.name
   property string realName: (model.realName === "") ? model.name : model.realName
@@ -13,27 +13,13 @@ Item {
   Text {
     id: usersName
 
-    color: "white"
+    color: "black"
     font {
       family: "FiraMono"
       pointSize: 20
     }
     text: realName
     anchors.horizontalCenter: parent.horizontalCenter
-  }
-
-  //User's Profile Pic
-  Image {
-    id: usersPic
-
-    width: 128
-    height: 128
-    anchors {
-      top: usersName.bottom
-      topMargin: 50
-      horizontalCenter: parent.horizontalCenter
-    }
-    source: icon
   }
 
   MouseArea {
