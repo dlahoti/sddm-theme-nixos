@@ -104,7 +104,7 @@ Item {
     Text {
       id: usersName
 
-      color: "black"
+      color: "#e6ebff"
       font {
         family: "FiraMono"
         pointSize: 20
@@ -118,7 +118,7 @@ Item {
     id: passwordStatus
 
     text: "Incorrect Password!"
-    color: "black"
+    color: "#e6ebff"
     font {
       pointSize: 10
       family: "FiraMono"
@@ -159,7 +159,7 @@ Item {
     anchors {
       horizontalCenter: parent.horizontalCenter
       top: userProfile.bottom
-      topMargin: -100
+      topMargin: -75
     }
 
     Text {
@@ -171,7 +171,7 @@ Item {
         leftMargin: 15
       }
       text: "Password..."
-      color: "black"
+      color: "#e6ebff"
       font {
         pointSize: 14
         family: "FiraMono"
@@ -193,7 +193,7 @@ Item {
         family: "FiraMono"
         letterSpacing: 2
       }
-      color: "black"
+      color: "#e6ebff"
       echoMode:TextInput.Password
       clip: true
 
@@ -232,7 +232,7 @@ Item {
       bottom: passwordBox.bottom
       left: passwordBox.left
     }
-    color: "black"
+    color: "#e6ebff"
     opacity: 0.3
     radius: 4
   }
